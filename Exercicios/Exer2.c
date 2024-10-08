@@ -5,12 +5,6 @@ int main(){
     setlocale(LC_ALL, "Portuguese"); //isso fara com que os acento e ç 
 int n1,n2,n3,M;
 
-
-
-
-
-
-
     printf("Digite o primeiro número inteiro:\n");
     scanf("%d", &n1);
 
