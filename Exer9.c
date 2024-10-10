@@ -14,19 +14,15 @@ int main() {
     char estadoCivil[20];
     int tempoCasada;
 
-    // Lê o nome
     printf("Digite seu nome:\n");
     fgets(nome, sizeof(nome), stdin);
-    nome[strcspn(nome, "\n")] = '\0'; // Remove a nova linha
+    nome[strcspn(nome, "\n")] = '\0'; 
 
-    // Lê o sexo
     printf("Digite seu sexo (M/F):\n");
     scanf(" %c", &sexo); 
-
     
     printf("Digite seu estado civil:\n");
     scanf(" %[^\n]", estadoCivil); 
-
     if (sexo == 'F' && strcasecmp(estadoCivil, "CASADA") == 0) {
       
         printf("Digite o tempo de casada (em anos):\n");
