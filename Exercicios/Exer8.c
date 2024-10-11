@@ -16,14 +16,8 @@ int main(){
     int idade,Dias = 365;
     printf("Digite o seu nome e sobrenome:\n");
      fgets(nome, sizeof(nome), stdin);
-
-    /*
-    Esse trecho de código garante que, após ler a entrada do usuário, a string não tenha uma nova linha no final, o que evita que a saída apareça com formatação inesperada. Essa prática é comum em C para garantir que as strings sejam tratadas corretamente.*/
-    size_t len = strlen(nome);
-    if (len > 0 && nome[len - 1] == '\n') {
-        nome[len - 1] = '\0';
-    }
-
+    nome[strcspn(nome, "\n")] = '\0';
+   
     printf("Digite a sua idade para ver ela em dias:\n");
     scanf("%d", &idade);
 
