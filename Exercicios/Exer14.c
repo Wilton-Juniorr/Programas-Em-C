@@ -135,6 +135,20 @@ int main(){
             break;
         }
         case 5:{
+            int a = 0,S;
+            printf("SOMA DE NUMEROS PAREDES DE 1 A 100\n");
+
+            while(a <= 100){
+                if(a % 2 == 0){
+                    printf("%d\n",a);
+                    S+=a;
+                }
+                a++;
+            }
+            printf("Resultado da SOMA: %d",S);
+            break;
+        }
+        case 6:{
             
         }
         default:
