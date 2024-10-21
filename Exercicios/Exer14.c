@@ -46,13 +46,22 @@ int main(){
     linha();
     printf("\tMENU DE OPCOES\n");
     printf("\t1.Par ou Impar\n");
-    scanf("%d", &opcao);
     linha();
-
+    scanf("%d", &opcao);
     switch(opcao){
         case 1:{
-            
+            int num;
+            printf("Digite um numero inteiro e veja se e PAR ou IMPAR:\n");
+            scanf("%d", &num);
+            if (num % 2 == 0){
+                printf("O numero %d e PAR!", num);
+            } else {
+                printf("O numero %d e IMPAR!", num);
+            }
+            break;
         }
+        default:
+        printf("OPCAO INVALIDA!");
     }
 
     return 0;
