@@ -47,7 +47,7 @@ int main(){
     printf("\tMENU DE OPCOES\n");
     printf("\t1.Par ou Impar\n");
     printf("\t2.Calculadora\n");
-    printf("\t3.Maior de TRES");
+    printf("\t3.Maior de TRES\n");
     linha();
     scanf("%d", &opcao);
     system("cls");
@@ -108,7 +108,26 @@ int main(){
             }
             break;
         }
-        //next
+        case 3:{
+            int v1,v2,v3;
+            printf("Digite tres numeros\n");
+            scanf("%d", &v1);
+            scanf("%d", &v2);
+            scanf("%d", &v3);
+            if(v1 > v2 && v1 > v3){
+                printf("%d e maior que %d e %d", v1,v2,v3);
+            } else if (v2 > v1 && v2 > v3) {
+                printf("o segundo numero %d maior que %d e %d",v2,v1,v3);
+            } else if (v3 > v1 && v3 > v2) {
+                printf("O terceiro numero %d maior que %d e %d", v3,v1,v2);
+            } else {
+                printf("Todos os numeros sao iguais %d, %d, %d",v1,v2,v3);
+            }
+            break;
+        }
+        case 4:{
+            
+        }
         default:
         printf("OPCAO INVALIDA!");
     }
