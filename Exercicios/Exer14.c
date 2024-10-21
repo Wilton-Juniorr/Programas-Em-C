@@ -48,6 +48,8 @@ int main(){
     printf("\t1.Par ou Impar\n");
     printf("\t2.Calculadora\n");
     printf("\t3.Maior de TRES\n");
+    printf("\t4.For(1 ate 100)\n");
+    printf("\t5.Soma Numeros PARES\n");
     linha();
     scanf("%d", &opcao);
     system("cls");
@@ -126,6 +128,13 @@ int main(){
             break;
         }
         case 4:{
+            int i;
+            for(i=0;i<=100;i++){
+                printf("%d\n", i);
+            }
+            break;
+        }
+        case 5:{
             
         }
         default:
