@@ -35,7 +35,7 @@ Crie um programa que receba números inteiros do usuário e vá somando esses n�
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <windows.h>
 void linha(){
     printf("----------------------------------\n");
 }
@@ -46,20 +46,69 @@ int main(){
     linha();
     printf("\tMENU DE OPCOES\n");
     printf("\t1.Par ou Impar\n");
+    printf("\t2.Calculadora\n");
+    printf("\t3.Maior de TRES");
     linha();
     scanf("%d", &opcao);
+    system("cls");
     switch(opcao){
         case 1:{
             int num;
             printf("Digite um numero inteiro e veja se e PAR ou IMPAR:\n");
             scanf("%d", &num);
             if (num % 2 == 0){
+
                 printf("O numero %d e PAR!", num);
             } else {
                 printf("O numero %d e IMPAR!", num);
             }
             break;
         }
+        case 2:{
+           
+            float n1,n2;
+            int opcaoo;
+            
+            printf("Digite um numero:\n");
+            scanf("%f", &n1);
+            printf("Digite o segundo numero:\n");
+            scanf("%f", &n2);
+
+            linha();
+            printf("\tMenu de Opcoes\n");
+            printf("\t1.Somar\n");
+            printf("\t2.Subtracao\n");
+            printf("\t3.Multiplicacao\n");
+            printf("\t4.Divisao\n");
+            linha();
+            scanf("%d", &opcaoo);
+            system("cls");
+            switch(opcaoo){
+                case 1:{
+                printf("Resultado: %.1f + %.1f = %.1f", n1, n2, n1 + n2 );        
+                break;
+                }
+                case 2:{
+                    printf("Resultado: %.1f - %.1f = %.1f", n1, n2, n1 - n2);
+                    break;
+                }
+                case 3:{
+                    printf("Resultado: %.1f * %.1f = %.1f", n1, n2, n1 * n2);
+                    break;
+                }
+                case 4:{
+                    if(n2 != 0){
+                        printf("Resultado: %.1f / %.1f = %.1f", n1,n2, n1/n2);
+                    } else {
+                        printf("ERROR! Divisor Nao pode ser ZERO.");
+                    }
+                    
+                    break;
+                }
+            }
+            break;
+        }
+        //next
         default:
         printf("OPCAO INVALIDA!");
     }
