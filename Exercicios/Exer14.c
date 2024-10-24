@@ -36,11 +36,13 @@ Crie um programa que receba números inteiros do usuário e vá somando esses n�
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-void linha(){
+void linha()
+{
     printf("----------------------------------\n");
 }
 
-int main(){
+int main()
+{
     int opcao;
 
     linha();
@@ -55,119 +57,204 @@ int main(){
     linha();
     scanf("%d", &opcao);
     system("cls");
-    switch(opcao){
-        case 1:{
-            int num;
-            printf("Digite um numero inteiro e veja se e PAR ou IMPAR:\n");
-            scanf("%d", &num);
-            if (num % 2 == 0){
+    switch (opcao)
+    {
+    case 1:
+    {
+        int num;
+        printf("Digite um numero inteiro e veja se e PAR ou IMPAR:\n");
+        scanf("%d", &num);
+        if (num % 2 == 0)
+        {
 
-                printf("O numero %d e PAR!", num);
-            } else {
-                printf("O numero %d e IMPAR!", num);
-            }
-            break;
+            printf("O numero %d e PAR!", num);
         }
-        case 2:{
-           
-            float n1,n2;
-            int opcaoo;
-            
-            printf("Digite um numero:\n");
-            scanf("%f", &n1);
-            printf("Digite o segundo numero:\n");
-            scanf("%f", &n2);
+        else
+        {
+            printf("O numero %d e IMPAR!", num);
+        }
+        break;
+    }
+    case 2:
+    {
 
-            linha();
-            printf("\tMenu de Opcoes\n");
-            printf("\t1.Somar\n");
-            printf("\t2.Subtracao\n");
-            printf("\t3.Multiplicacao\n");
-            printf("\t4.Divisao\n");
-            linha();
-            scanf("%d", &opcaoo);
-            system("cls");
-            switch(opcaoo){
-                case 1:{
-                printf("Resultado: %.1f + %.1f = %.1f", n1, n2, n1 + n2 );        
-                break;
-                }
-                case 2:{
-                    printf("Resultado: %.1f - %.1f = %.1f", n1, n2, n1 - n2);
-                    break;
-                }
-                case 3:{
-                    printf("Resultado: %.1f * %.1f = %.1f", n1, n2, n1 * n2);
-                    break;
-                }
-                case 4:{
-                    if(n2 != 0){
-                        printf("Resultado: %.1f / %.1f = %.1f", n1,n2, n1/n2);
-                    } else {
-                        printf("ERROR! Divisor Nao pode ser ZERO.");
-                    }
-                    
-                    break;
-                }
-            }
-            break;
-        }
-        case 3:{
-            int v1,v2,v3;
-            printf("Digite tres numeros\n");
-            scanf("%d", &v1);
-            scanf("%d", &v2);
-            scanf("%d", &v3);
-            if(v1 > v2 && v1 > v3){
-                printf("%d e maior que %d e %d", v1,v2,v3);
-            } else if (v2 > v1 && v2 > v3) {
-                printf("o segundo numero %d maior que %d e %d",v2,v1,v3);
-            } else if (v3 > v1 && v3 > v2) {
-                printf("O terceiro numero %d maior que %d e %d", v3,v1,v2);
-            } else {
-                printf("Todos os numeros sao iguais %d, %d, %d",v1,v2,v3);
-            }
-            break;
-        }
-        case 4:{
-            int i;
-            for(i=0;i<=100;i++){
-                printf("%d\n", i);
-            }
-            break;
-        }
-        case 5:{
-            int a = 0,S;
-            printf("SOMA DE NUMEROS PAREDES DE 1 A 100\n");
+        float n1, n2;
+        int opcaoo;
 
-            while(a <= 100){
-                if(a % 2 == 0){
-                    printf("%d\n",a);
-                    S+=a;
-                }
-                a++;
-            }
-            printf("Resultado da SOMA: %d",S);
-            break;
-        }
-        case 6:{
-            int nn;
-            int falt = 1 ,f = 1;
-            printf("Digite um numero inteiro e veja o seu fatorial:\n");
-            scanf("%d", &nn);
-            do {
-                falt = falt * f;
-                f++;
-            }while(f <= nn);
-            printf("Resultado fatorial: %d", falt);
-            break;
-        }
-        case 7:{
+        printf("Digite um numero:\n");
+        scanf("%f", &n1);
+        printf("Digite o segundo numero:\n");
+        scanf("%f", &n2);
 
+        linha();
+        printf("\tMenu de Opcoes\n");
+        printf("\t1.Somar\n");
+        printf("\t2.Subtracao\n");
+        printf("\t3.Multiplicacao\n");
+        printf("\t4.Divisao\n");
+        linha();
+        scanf("%d", &opcaoo);
+        system("cls");
+        switch (opcaoo)
+        {
+        case 1:
+        {
+            printf("Resultado: %.1f + %.1f = %.1f", n1, n2, n1 + n2);
+            break;
+        }
+        case 2:
+        {
+            printf("Resultado: %.1f - %.1f = %.1f", n1, n2, n1 - n2);
+            break;
+        }
+        case 3:
+        {
+            printf("Resultado: %.1f * %.1f = %.1f", n1, n2, n1 * n2);
+            break;
+        }
+        case 4:
+        {
+            if (n2 != 0)
+            {
+                printf("Resultado: %.1f / %.1f = %.1f", n1, n2, n1 / n2);
+            }
+            else
+            {
+                printf("ERROR! Divisor Nao pode ser ZERO.");
+            }
+            break;
         }
         default:
-        printf("OPCAO INVALIDA!");
+            printf("Opcao Invalida!\n");
+        break;
+        }
+        break;
+    }
+    case 3:
+    {
+        int v1, v2, v3;
+        printf("Digite tres numeros\n");
+        scanf("%d", &v1);
+        scanf("%d", &v2);
+        scanf("%d", &v3);
+        if (v1 > v2 && v1 > v3)
+        {
+            printf("%d e maior que %d e %d", v1, v2, v3);
+        }
+        else if (v2 > v1 && v2 > v3)
+        {
+            printf("o segundo numero %d maior que %d e %d", v2, v1, v3);
+        }
+        else if (v3 > v1 && v3 > v2)
+        {
+            printf("O terceiro numero %d maior que %d e %d", v3, v1, v2);
+        }
+        else
+        {
+            printf("Todos os numeros sao iguais %d, %d, %d", v1, v2, v3);
+        }
+        break;
+    }
+    case 4:
+    {
+        int i;
+        for (i = 0; i <= 100; i++)
+        {
+            printf("%d\n", i);
+        }
+        break;
+    }
+    case 5:
+    {
+        int a = 0, S;
+        printf("SOMA DE NUMEROS PAREDES DE 1 A 100\n");
+
+        while (a <= 100)
+        {
+            if (a % 2 == 0)
+            {
+                printf("%d\n", a);
+                S += a;
+            }
+            a++;
+        }
+        printf("Resultado da SOMA: %d", S);
+        break;
+    }
+    case 6:
+    {
+        int nn;
+        int falt = 1, f = 1;
+        printf("Digite um numero inteiro e veja o seu fatorial:\n");
+        scanf("%d", &nn);
+        do
+        {
+            falt = falt * f;
+            f++;
+        } while (f <= nn);
+        printf("Resultado fatorial de %d: %d", nn, falt);
+        break;
     }
 
+    case 7:
+    {
+        int opp, nnum;
+        linha();
+        printf("\tMenu de opcoes!\n");
+        printf("\t1.NumPositivo-OR-Negativo\n");
+        printf("\t2.PAR-IMPAR\n");
+        printf("\t0.Sair do Programa\n");
+        linha();
+        scanf("%d", &opp);
+        system("cls");
+
+        switch (opp)
+        {
+        case 1:
+        {
+            printf("Digite um numero e veja se ele e positivo ou negativo\n");
+            printf("Digite um numero:\n");
+            scanf("%d", &nnum);
+            if (nnum > 0)
+            {
+                printf("Numero %d positivo!\n", nnum);
+            }
+            else if (nnum < 0)
+            {
+                printf("Numero %d Negativo!\n", nnum);
+            } else 
+            {
+                printf("O Numero %d e Zero.\n", nnum);
+            }
+            break;
+        }
+        case 2:
+        {
+            printf("Digite um numero e veja se ele e PAR ou IMPAR!\n");
+            printf("Digite um numero inteiro:\n");
+            scanf("%d", &nnum);
+            if (nnum % 2 != 0)
+            {
+                printf("Numero %d IMPAR!", nnum);
+            }
+            else
+            {
+                printf("Numero %d PAR!", nnum);
+            }
+            break;
+        }
+        case 0:
+        {
+            printf("Saindo do Programa...");
+            Sleep(500);
+            break;
+        }
+        }
+        break;
+    }
+    default:
+        printf("OPCAO INVALIDA!");
+        break;
+    }
     return 0;
 }
