@@ -55,6 +55,8 @@ int main()
     printf("\t6.Faltorial\n");
     printf("\t7.Menu\n");
     printf("\t8.Media Aritmetica\n");
+    printf("\t9.Tabuada\n");
+    printf("\t10.Soma.\n");
     linha();
     scanf("%d", &opcao);
     system("cls");
@@ -269,6 +271,30 @@ int main()
         } else {
             printf("Nota %.1f! Reprovado! Estude mais no proximo ano.\n", med);
         }
+        break;
+    }
+    case 9:{
+        int t,ii,res;
+        //tabuada
+        printf("Digite um numero inteiro para ver sua tabuada:\n");
+        printf("Digite um numero:\n");
+        scanf("%d", &t);
+        printf("Tabuada do %d\n", t);
+        for(ii = 0; ii <= 10; ii++){
+            res = t * ii;
+            printf("%d * %d = %d\n", t, ii, res);
+        }
+        break;
+    }
+    case 10:{
+        int seila = 0, nnum1;
+        printf("Soma dos numeros ate o usuario digitar 0.\n");
+        do{
+            printf("Digite um numero:\n");
+            scanf("%d", &nnum1);
+            seila = seila + nnum1;
+        }while(nnum1 != 0);
+        printf("Soma de todos os numeros digitados %d:\n", seila);
         break;
     }
     
