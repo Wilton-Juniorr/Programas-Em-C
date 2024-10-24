@@ -50,6 +50,8 @@ int main(){
     printf("\t3.Maior de TRES\n");
     printf("\t4.For(1 ate 100)\n");
     printf("\t5.Soma Numeros PARES\n");
+    printf("\t6.Faltorial\n");
+    printf("\t7.Menu\n");
     linha();
     scanf("%d", &opcao);
     system("cls");
@@ -149,7 +151,19 @@ int main(){
             break;
         }
         case 6:{
-            
+            int nn;
+            int falt = 1 ,f = 1;
+            printf("Digite um numero inteiro e veja o seu fatorial:\n");
+            scanf("%d", &nn);
+            do {
+                falt = falt * f;
+                f++;
+            }while(f <= nn);
+            printf("Resultado fatorial: %d", falt);
+            break;
+        }
+        case 7:{
+
         }
         default:
         printf("OPCAO INVALIDA!");
