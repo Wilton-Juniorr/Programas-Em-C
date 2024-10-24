@@ -54,6 +54,7 @@ int main()
     printf("\t5.Soma Numeros PARES\n");
     printf("\t6.Faltorial\n");
     printf("\t7.Menu\n");
+    printf("\t8.Media Aritmetica\n");
     linha();
     scanf("%d", &opcao);
     system("cls");
@@ -252,6 +253,25 @@ int main()
         }
         break;
     }
+    case 8:{
+        //media aritimetrica quatro notas
+        float nt1,nt2,nt3,nt4,med;
+        printf("Digite 4 notas:\n");
+        scanf("%f", &nt1);
+        scanf("%f", &nt2);
+        scanf("%f", &nt3);
+        scanf("%f", &nt4);
+        med = (nt1+nt2+nt3+nt4)/4;
+        if(med > 7.0){
+            printf("Nota %.1f! Parabens APROVADO!\n", med);
+        } else if (med > 6.0 || med > 4.0){
+            printf("Nota %.1f! Recuperacao ESTUDE!\n", med);
+        } else {
+            printf("Nota %.1f! Reprovado! Estude mais no proximo ano.\n", med);
+        }
+        break;
+    }
+    
     default:
         printf("OPCAO INVALIDA!");
         break;
