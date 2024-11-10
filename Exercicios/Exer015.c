@@ -26,7 +26,8 @@ printf("Horas %d, Minutos %d e segundos %d totais.\n", horas, min, seg);
 }
 
 void CalcularMED (){
-    float n1,n2,n3;
+    float n1,n2,
+    n3;
     printf("Digite as 3 notas:\n");
     scanf("%f %f %f", &n1,&n2, &n3);
 
