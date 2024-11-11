@@ -59,3 +59,17 @@ void bemvindo (){
     printf("Seja Bem Vindo ao Programa.\n");
 }
 
+void desconto1 (float valorproduto,float desconto){
+    float resultado = valorproduto - (valorproduto * desconto);
+    printf("Resultado: %.2f", resultado);
+}
+
+void imposto1 (float valorproduto, float vimposto){
+    float resultado = valorproduto + (valorproduto * vimposto);
+    printf("Resultado: %.2f", resultado);
+}
+
+void itens1 (float valorproduto,float quantproduto){
+    float resultado = valorproduto * quantproduto;
+    printf("Resultado: %.2f", resultado);
+}
