@@ -5,13 +5,6 @@
 #include <math.h>
 #include <windows.h>
 
-
-
-
-
-
-
-
 float desconto (float valorproduto,float desconto){
     return valorproduto - (valorproduto * desconto);
 }
