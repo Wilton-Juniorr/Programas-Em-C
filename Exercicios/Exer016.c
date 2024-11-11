@@ -36,23 +36,14 @@ if(vimposto > desconto){
 }
 }
 
-int data (int D1, int M1, int A1){
-  int  D = 7, M = 11, A = 24;
-if(D != D1){
-    return "false";
-} else {
-    return "true";
-}
-if(M != M1){
-    return "false";
-} else {
-    return "true";
-}
-if(A != A1){
-    return "false";
-} else {
-    return "true";
-}
+int data(int D1, int M1, int A1) {
+    int D = 7, M = 11, A = 24; // Data fixa para comparação
+    // Comparação dos valores
+    if (D == D1 && M == M1 && A == A1) {
+        return 1;  // Retorna 1 (verdadeiro) se a data for igual à fixa
+    } else {
+        return 0;  // Retorna 0 (falso) caso contrário
+    }
 }
 
 void bemvindo (){
@@ -96,18 +87,26 @@ int main(){
     scanf("%f", &num2);
     float D = desconto(num1,num2);
     printf("O valor do Produto com desconto: %.2f\n", D);
-
+    printf("\n");
     printf("Digite o valor do imposto:\n");
     scanf("%f", &imp);
     float i = imposto(D,imp);
     printf("O valor do produto com desconto e com imposto: %.2f\n", i);
-
+    printf("\n");
     printf("Digite a quantidade de produtos:\n");
     scanf("%f", &qpro);
     float in = itens(i,qpro);
     printf("O valor da quantidade de todos os produtos: %.2f\n",in);
+    printf("\n");
+    printf("Veja o resultado do imposto elevado a potencia com o desconto:\n");
+    float pot = potencia(imp,num2);
+    printf("Resultado: %.2f\n", pot);
 
-    
+    printf("Agora veja qual e maior entre o imposto e o desconto:\n");
+    float maior = valormaior(imp,num2);
+    printf("Resultado: %.2f", maior);
+
+
 
     return 0;
 }
