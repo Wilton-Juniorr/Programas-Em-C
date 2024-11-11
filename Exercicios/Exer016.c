@@ -73,3 +73,41 @@ void itens1 (float valorproduto,float quantproduto){
     float resultado = valorproduto * quantproduto;
     printf("Resultado: %.2f", resultado);
 }
+
+void potencia1 (float vimposto, float desconto){
+ float resultado = pow (vimposto,desconto);
+ printf("Resultado: %.2f", resultado);
+}
+
+void valormaior1 (float vimposto, float desconto){
+if(vimposto > desconto){
+    return vimposto;
+} else {
+    return desconto;
+}
+
+}
+
+int main(){
+    float num1,num2,imp,qpro;
+    printf("Digite o valor do produto:\n");
+    scanf("%f", &num1);
+    printf("Digite o valor do desconto:\n");
+    scanf("%f", &num2);
+    float D = desconto(num1,num2);
+    printf("O valor do Produto com desconto: %.2f\n", D);
+
+    printf("Digite o valor do imposto:\n");
+    scanf("%f", &imp);
+    float i = imposto(D,imp);
+    printf("O valor do produto com desconto e com imposto: %.2f\n", i);
+
+    printf("Digite a quantidade de produtos:\n");
+    scanf("%f", &qpro);
+    float in = itens(i,qpro);
+    printf("O valor da quantidade de todos os produtos: %.2f\n",in);
+
+    
+
+    return 0;
+}
