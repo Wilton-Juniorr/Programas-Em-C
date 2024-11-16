@@ -73,6 +73,7 @@ if(vimposto > desconto){
 }
 
 int main(){
+    bemvindo();
     float num1,num2,imp,qpro;
     printf("Digite o valor do produto:\n");
     scanf("%f", &num1);
