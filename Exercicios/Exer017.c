@@ -34,7 +34,7 @@ scanf("%f", &desc);
 r = salarioB * desc/100;
 salarioL = salarioB - r;
 
-printf(" %s seu salario de %.2f vai ser %.2f\n",nome,salarioB,salarioL);
+printf("%s seu salario de %.2f vai ser %.2f\n", nome, salarioB, salarioL);
 }
 
 int main(){
