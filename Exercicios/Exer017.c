@@ -23,13 +23,11 @@ printf("Digite seu nome:\n");
 fgets(nome, sizeof(nome), stdin);
 nome[strcspn(nome, "\n")] = '\0';
 
-
 printf("Digite o seu salario bruto:\n");
 scanf("%f", &salarioB);
 
 printf("Digite a porcentagem do desconto do seu salario:\n");
 scanf("%f", &desc);
-
 
 r = salarioB * desc/100;
 salarioL = salarioB - r;
