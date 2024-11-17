@@ -4,8 +4,8 @@
 #include <string.h>
 
 float mediapeso(float n1,float n2, float n3){
-float peso1 = 2,peso2 = 3,peso3 = 5,M;
-return M = (n1 * peso1 + n2 * peso2 + n3 * peso3) / (peso1 + peso2 + peso3);
+float peso1 = 2,peso2 = 3,peso3 = 5;
+return (n1 * peso1 + n2 * peso2 + n3 * peso3) / (peso1 + peso2 + peso3);
 }
 
 void linha(){
@@ -13,13 +13,13 @@ void linha(){
 }
 
 
-
 void salario (){
 float salarioB,salarioL;
-char nome[30];
+char nome[100];
 float desc,r;
 
 printf("Digite seu nome:\n");
+getchar();
 fgets(nome, sizeof(nome), stdin);
 nome[strcspn(nome, "\n")] = '\0';
 
